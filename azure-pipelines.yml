@@ -1,7 +1,11 @@
 trigger:
-- '*'
-- exclude:
-  - 'azure-piplelines.yml'
+  batch: false
+  branches:
+    include:
+    - '*'
+  paths:
+    exclude:
+    - 'azure-piplelines.yml'
 
 pool:
   vmImage: 'ubuntu-16.04'
